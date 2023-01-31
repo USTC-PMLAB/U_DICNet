@@ -31,10 +31,10 @@ parser = argparse.ArgumentParser(description='U-DICNet Training on speckle datas
 # parser.add_argument("--local_rank", type=int, default=0)
 parser.add_argument('--arch', default='U_DICNet', choices=['StrainNet_f', 'U_DICNet', 'U_StrainNet_f'],
                     help='network selection')
-# parser.add_argument('--train_dataset_root', '-trr', metavar='DIR',
-#                     help='path to training dataset')
-# parser.add_argument('--test_dataset_root', '-ter', metavar='DIR',
-#                     help='path to training dataset')
+parser.add_argument('--train_dataset_root', '-trr', metavar='DIR',
+                    help='path to training dataset')
+parser.add_argument('--test_dataset_root', '-ter', metavar='DIR',
+                    help='path to training dataset')
 parser.add_argument('--solver', default='adam', choices=['adam','sgd'],
                     help='solver algorithms')
 parser.add_argument('-j', '--workers', default=12, type=int, metavar='N',
