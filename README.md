@@ -48,16 +48,16 @@ python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /pa
 Execute the following commands in the U_DICNet directory (please also copy here the tar files if you use the pretrained models)
 
 ```bash
-python inference.py ../cellular deformation/  --arch U_DICNet  --pretrained StrainNet-h.pth.tar
+python inference.py ../sinusoidal_deformation/  --arch U_DICNet  --pretrained U_DICNet.pth.tar
 
 ```
-The output of inference.py can be found in ../cellular deformation/
+The output of inference.py can be found in ../sinusoidal_deformation/
 
 
-|Reference image   | ![](cellular_deformation/re001.bmp)   |
-|Target image   | ![](cellular_deformation/tar001.bmp)   |
+|Reference image   | ![](sinusoidal_deformation/re001.bmp)   |
+|Target image      | ![](sinusoidal_deformation/tar001.bmp)  |
 |:----------:|:---------------------------------------------:|
-|Retrieved by U_DICNet  | ![](cellular_deformation/deformation.bmp)| or | ![](cellular_deformation/deformation.csv)|
+|Retrieved by U_DICNet  | ![](sinusoidal_deformation/U_DICNet.png)| or | ![](sinusoidal_deformation/U_DICNet_disp_x001.csv)|
 
 
 ## References 
