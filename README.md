@@ -49,7 +49,7 @@ python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /pa
 ```
 
 ## pretrained model
-The pretrained model of U_DICNet are avaliable [google drive] https://drive.google.com/file/d/1vtCL7nBXYUPYgWmKGc2iuZGEb4zFY5md/view?usp=share_link and [百度云盘] https://pan.baidu.com/s/1N99rpZ7-OOgSm6SAvOUo9A?pwd=76tk 提取码：76tk
+The pretrained model of U_DICNet are avaliable at [google drive](https://drive.google.com/file/d/1vtCL7nBXYUPYgWmKGc2iuZGEb4zFY5md/view?usp=share_link) and [百度云盘](https://pan.baidu.com/s/1N99rpZ7-OOgSm6SAvOUo9A?pwd=76tk)
 
 
 ## cellular deformation measurement
