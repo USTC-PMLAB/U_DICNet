@@ -48,6 +48,10 @@ python inference.py /path/to/input/images/  --arch U_StrainNet_f  --pretrained /
 python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /path/to/pretrained/model
 ```
 
+## pretrained model
+The pretrained model of U_DICNet are avaliable [google drive] https://drive.google.com/file/d/1vtCL7nBXYUPYgWmKGc2iuZGEb4zFY5md/view?usp=share_link and [百度云盘] https://pan.baidu.com/s/1N99rpZ7-OOgSm6SAvOUo9A?pwd=76tk 提取码：76tk
+
+
 ## cellular deformation measurement
 
 Execute the following commands in the U_DICNet directory (please also copy here the tar files if you use the pretrained models)
@@ -77,6 +81,6 @@ https://doi.org/10.1007/s11431-022-2122-y
 ## Acknowledgments
 
 This code is based on the Pytorch implmentation of FlowNetS from [FlowNetPytorch](https://github.com/ClementPinard/FlowNetPytorch)
-This code is based on the Pytorch implmentation of StrainNet from [StrainNetPytorch](https://github.com/DreamIP/StrainNet)
+and the Pytorch implmentation of StrainNet from [StrainNetPytorch](https://github.com/DreamIP/StrainNet)
 >>>>>>> 38a316db5ce66ad2a4143ea86c562b0b63705002
 # U_DICNet
