@@ -71,7 +71,7 @@ The reference image ,target image, and the result are shown below
 
 
 ## References 
-[1] Lan S H, Su Y, Gao Z R, et al. Deep learning for complex displacement field measurement[J]. Science China Technological Sciences, 2022: 1-18.
+[1] Lan S H, Su Y, Gao Z R, et al. Deep learning for complex displacement field measurement[J]. Science China Technological Sciences, 2022, 65: 3039-3056.
 
 https://link.springer.com/article/10.1007/s11431-022-2122-y
 
