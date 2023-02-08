@@ -33,9 +33,9 @@ cudnn >= 7.5
     Train dataset, Test dataset
 3. Execute the following commands
 ```
-python Train.py --arch U_DICNet 
-python Train.py --arch U_StrainNet_f
-python Train.py --arch StrainNet_f
+python dis_train.py --arch U_DICNet --train_dataset_root /path/to/training_dataset --test_dataset_root /path/to/test_dataset
+python dis_train.py --arch U_StrainNet_f --train_dataset_root /path/to/training_dataset --test_dataset_root /path/to/test_dataset
+python dis_train.py --arch StrainNet_f --train_dataset_root /path/to/training_dataset --test_dataset_root /path/to/test_dataset
 ```
 
 ## Running inference
@@ -43,9 +43,9 @@ python Train.py --arch StrainNet_f
 The images pairs should be in the same location, with the name pattern re*.ext  tar*.ext
 
 ```bash
-python inference.py /path/to/input/images/  --arch U_DICNet  --pretrained /path/to/pretrained/model
-python inference.py /path/to/input/images/  --arch U_StrainNet_f  --pretrained /path/to/pretrained/model
-python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /path/to/pretrained/model
+python inference.py  --arch U_DICNet --img_dir /path/to/input/images/ --pretrained /path/to/pretrained/model
+python inference.py  --arch U_StrainNet_f --img_dir /path/to/input/images/ --pretrained /path/to/pretrained/model
+python inference.py  --arch StrainNet_f --img_dir /path/to/input/images/ --pretrained /path/to/pretrained/model
 ```
 
 ## pretrained model
@@ -57,7 +57,7 @@ The pretrained model of U_DICNet are avaliable at [google drive](https://drive.g
 Execute the following commands in the U_DICNet directory (please also copy here the tar files if you use the pretrained models)
 
 ```bash
-python inference.py ../sinusoidal_deformation/  --arch U_DICNet  --pretrained U_DICNet.pth.tar
+python inference.py  --arch U_DICNet --img_dir ../sinusoidal_deformation/ --pretrained U_DICNet.pth.tar
 
 ```
 The output of inference.py can be found in ../sinusoidal_deformation/
