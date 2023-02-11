@@ -15,15 +15,17 @@ def EPE(input_flow, target_flow, rank, real=False, mean=True):
     """
     if ~real:
         b, c, h, w = input_flow.size()
+        '''
         X = torch.arange(-int(w / 2), int(w / 2)).to(rank)
         Y = torch.arange(-int(h / 2), int(h / 2)).to(rank)
 
         # gauss weight
         [x, y] = torch.meshgrid(X, Y)
         gauss_weight = torch.exp(-(x ** 2 + y ** 2) / (h * w / 8))
+        '''
         # gauss_weight = torch.from_numpy(gauss_weight).float()
         # gauss_weight = gauss_weight
-        # gauss_weight = (input_flow - target_flow) / torch.max(torch.abs(input_flow - target_flow))
+        gauss_weight = (input_flow - target_flow) / torch.max(torch.abs(input_flow - target_flow))
 
         # weighted endpoint error
         EPE_map = torch.norm(input_flow.mul(gauss_weight) - target_flow.mul(gauss_weight), 2, 1)  # 二阶范数，差值的平方和

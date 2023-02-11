@@ -37,15 +37,15 @@ parser.add_argument('--test_dataset_root', '-ter', metavar='DIR',
                     help='path to training dataset')
 parser.add_argument('--pretrained', dest='pretrained', default=None,
                     help='path to pre-trained model')
-parser.add_argument('--solver', default='adam', choices=['adam','sgd'],
+parser.add_argument('--solver', default='sgd', choices=['adam','sgd'],
                     help='solver algorithms')
-parser.add_argument('-j', '--workers', default=12, type=int, metavar='N',
+parser.add_argument('-j', '--workers', default=1, type=int, metavar='N',
                     help='number of data loading workers')
 parser.add_argument('-b', '--batch-size', default=16, type=int,
                     metavar='N', help='mini-batch size')
 parser.add_argument('--milestones', default=[40, 80, 120, 160, 200, 240],
                     metavar='N', nargs='*', help='epochs at which learning rate is divided by 2')
-parser.add_argument('--epochs', default=200, type=int, metavar='N',
+parser.add_argument('--epochs', default=300, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--beta', default=0.999, type=float, metavar='M',
                     help='beta parameter for adam')
@@ -63,9 +63,9 @@ parser.add_argument('--momentum', default=0.9, type=float, metavar='M',
 #                     help='training weight for each scale, from highest resolution (flow2) to lowest (flow6)',
 #                     metavar=('W2', 'W3', 'W4', 'W5', 'W6'))
 
-parser.add_argument('--multiscale-weights', '-w', default=[0.01, 0.02, 0.05, 0.08, 0.24], type=float, nargs=5,
+parser.add_argument('--multiscale-weights', '-w', default=[0.08, 0.02, 0.02, 0.05, 0.24], type=float, nargs=5,
                     help='training weight for each scale, from highest resolution (flow2) to lowest (flow6)',
-                    metavar=('W2', 'W3', 'W4', 'W5', 'W6'))  # 0.02, 0.02, , 'W5', 'W6'
+                    metavar=('W2', 'W3', 'W4', 'W5', 'W6'))  #0.01, 0.02, 0.05, 0.08, 0.24
 
 
 class AverageMeter(object):
