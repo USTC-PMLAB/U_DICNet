@@ -21,7 +21,8 @@ pandas
 shutil
 glob
 time
-cuda >=11.1
+opencv >= 3.4
+cuda >= 11.1
 cudnn >= 7.5
 ```
 
